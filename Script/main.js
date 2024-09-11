@@ -1,7 +1,7 @@
-let kod = Math.floor(Math.random() * (100 - 90) + 90);
-let uchXonalison = Math.floor(Math.random() * 999);
-let BirinchiJuftlik = Math.floor(Math.random() * 99);
-let IkkinchiJuftlik = Math.floor(Math.random() * 99);
+let kod = Math.floor(Math.random() * 10 + 90);
+let uchXonalison = Math.floor(Math.random() * 1000);
+let BirinchiJuftlik = Math.floor(Math.random() * 100);
+let IkkinchiJuftlik = Math.floor(Math.random() * 100);
 
 // raqamlarni baholash
 let chiroyli = Math.floor(uchXonalison / 100) == Math.floor(uchXonalison / 10) % 10 || Math.floor(uchXonalison / 10) % 10 == uchXonalison % 10;
@@ -15,6 +15,15 @@ if (uchXonalison < 100 && uchXonalison > 9) {
 } else if (uchXonalison < 10) {
   uchXonalison = "00  " + uchXonalison;
 }
+
+if (BirinchiJuftlik < 10) {
+  BirinchiJuftlik = "0" + BirinchiJuftlik;
+}
+
+if (IkkinchiJuftlik < 10) {
+  IkkinchiJuftlik = "0" + IkkinchiJuftlik;
+}
+
 
 if (kod == 92 || kod == 96 || kod == 98) {
   console.log(`"${kod}" Uzbekistonda bunaqa kodli aloqa xizmati yo'q :(`);
